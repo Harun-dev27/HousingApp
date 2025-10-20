@@ -11,11 +11,10 @@
         public Boolean IsOccupied { get; set; }
         public Boolean InBuiltWardrobe { get; set; }
         public Boolean InBuiltWashroom { get; set; }
+        public decimal? SquareMetres { get; set; }
 
-        public decimal SquareMetres { get; set; }
 
-
-        public Units(string unitName, int apartmentId, string unitNumber, string unitTypeId, decimal rentAmount, Boolean isOccupied, Boolean inBuiltWardrobe, Boolean inBuiltWashroom, decimal SquareMetres)
+        public Units(string unitName, int apartmentId, string unitNumber, string unitTypeId, decimal rentAmount, Boolean isOccupied, Boolean inBuiltWardrobe, Boolean inBuiltWashroom, decimal? quareMetres)
         {
             UnitName = unitName;
             ApartmentId = apartmentId;
@@ -25,7 +24,7 @@
             IsOccupied = isOccupied;
             InBuiltWardrobe = inBuiltWardrobe;
             InBuiltWashroom = inBuiltWashroom;
-            this.SquareMetres = SquareMetres;
+            SquareMetres = squareMetres;
         }
     }
 }
