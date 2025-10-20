@@ -14,7 +14,7 @@
         public decimal? SquareMetres { get; set; }
 
 
-        public Units(string unitName, int apartmentId, string unitNumber, string unitTypeId, decimal rentAmount, Boolean isOccupied, Boolean inBuiltWardrobe, Boolean inBuiltWashroom, decimal? quareMetres)
+        public Units(string unitName, int apartmentId, string unitNumber, string unitTypeId, decimal rentAmount, Boolean isOccupied, Boolean inBuiltWardrobe, Boolean inBuiltWashroom, decimal? squareMetres)
         {
             UnitName = unitName;
             ApartmentId = apartmentId;
