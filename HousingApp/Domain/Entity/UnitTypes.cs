@@ -5,6 +5,7 @@ public class UnitTypes
 {
     public string UnitTypeId { get; set; }
     public string UnitTypeName { get; set; }
+    public ICollection<Units> { get; set; } = new List<Units>();
     public UnitTypes(string unitTypeId, string unitTypeName, decimal Rent)
     {
         UnitTypeId = unitTypeId;

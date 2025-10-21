@@ -8,6 +8,7 @@ public class Apartment
     public string Street { get; set; }
     public string Location { get; set; }
     public int NumberOfUnits { get; set; }
+    public Icollection<Unit> Units { get; set; } = new List<Unit>();
     public boolean IsVacant { get; set; }
     public Boolean ParkingAvailable { get; set; }
     public Boolean WaterAvailable { get; set; }
