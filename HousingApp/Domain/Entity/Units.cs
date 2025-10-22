@@ -8,7 +8,8 @@
         public string UnitNumber { get; set; }
         public string UnitTypeId { get; set; } // Foreign key to UnitTypes
         public decimal RentAmount { get; set; }
-        public ICollection<apartment> { get; set; } = new List<apartment>();
+        public ICollection<Apartment> Apartments { get; set; } = new List<Apartment>();
+        public ICollection<UnitType> UnitTypes { get; set; } = new List<UnitType>();
         public Boolean IsOccupied { get; set; }
         public Boolean InBuiltWardrobe { get; set; }
         public Boolean InBuiltWashroom { get; set; }
