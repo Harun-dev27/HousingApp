@@ -1,7 +1,7 @@
 ﻿using HousingApp.Domain.Shared;
 namespace HousingApp.Domain.Entity;
 
-public class UnitTypes
+public class UnitTypes: BaseEntity
 {
     public string UnitTypeId { get; set; }
     public string UnitTypeName { get; set; }

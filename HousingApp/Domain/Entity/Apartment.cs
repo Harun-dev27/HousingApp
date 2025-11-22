@@ -1,8 +1,11 @@
 ﻿using HousingApp.Domain.Shared;
 namespace HousingApp.Domain.Entity;
-public class Apartment
+public class Apartment: BaseEntity 
 {
-    public int ApartmentId { get; set; }
+    // One apartment can have multiple units
+    // Many student many courses (define navigation properties on both sides) Place Icollection on both sides 
+    // Entity framework(ORM) will create a junction table to represent the many to many relationship
+
     public string ApartmentName { get; set; }
     public string Address { get; set; }
     public string Street { get; set; }

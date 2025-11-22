@@ -6,7 +6,7 @@ public class LandLord: BaseEntity
 {
     public string FirstName { get; set; } 
     public string LastName { get; set; }
-    public string Email { get; set; }
+    public Email Email { get; set; } // constraints should be followed
     public string PhoneNumber { get; set; }
     public string Country { get; set; }
     public string County { get; set; }

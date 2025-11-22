@@ -1,11 +1,14 @@
 ﻿namespace HousingApp.Domain.Entity
 {
-    public class Units
+    public class Units: BaseEntity
     {
-        public int UnitId { get; set; }
+
+        // One apartment can have multiple units
+        // We have to define the  navigation prperty of the  one side together with its primary key (which becomes the FK)in the many class
+        // Units.Apartment (For querying the apartment of a unit) 
         public string UnitName { get; set; }
         public int ApartmentId { get; set; } // Foreign key to Apartments
-        public Apartment apartment { get; set; } // Navigation property  // many units belong to one apartment  
+        public Apartment Apartment { get; set; } // Navigation property  // many units belong to one apartment  
         public string UnitNumber { get; set; }
         public string UnitTypeId { get; set; } // Foreign key to UnitTypes
         public UnitType UnitType { get; set; } // Navigation property // many units belong to one unit type

@@ -1,7 +1,7 @@
 ﻿using HousingApp.Domain.Shared;
 namespace HousingApp.Domain.Entity;
 
-public class HouseHold : BaseEntity
+public  class HouseHold : BaseEntity
 {
     public string Country { get; set; }
     public string County { get; set; }
@@ -28,4 +28,9 @@ public class HouseHold : BaseEntity
         CareTakerPhoneNumber = careTakerPhoneNumber;
 
     }
+    //public override void Validate()
+    //{
+    //    // Implement validation logic here
+        
+    //}
 }
