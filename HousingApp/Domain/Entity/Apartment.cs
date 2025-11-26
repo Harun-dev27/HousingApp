@@ -10,23 +10,26 @@ public class Apartment: BaseEntity
     public string Address { get; set; }
     public string Street { get; set; }
     public string Location { get; set; }
-    public int NumberOfUnits { get; set; }
-    public Icollection<Unit> Units { get; set; } = new List<Unit>(); // One apartment can have multiple units
-    public ICollection<ApartmentUnitType> ApartmentUnitTypes { get; set; } = new List<ApartmentUnitType>(); // One apartment can be associated with multiple apartment-unit type relationships
-    public boolean IsVacant { get; set; }
-    public Boolean ParkingAvailable { get; set; }
-    public Boolean WaterAvailable { get; set; }
-    public Boolean WifiAvailable { get; set; }
-    public Boolean PetsAllowed { get; set; }
 
+    //One apartment can have multiple units
+    public ICollection<Unit> Units { get; set; } = new List<Unit>(); // One apartment can have multiple units
+    
+    public bool IsVacant { get; set; }
+    public bool ParkingAvailable { get; set; }
+    public bool WaterAvailable { get; set; }
+    public bool WifiAvailable { get; set; }
+    public bool PetsAllowed { get; set; }
 
-    public Apartment(string apartmentName, string address, string street, string location, int numberOfUnits, Boolean isVacant, Boolean parkingAvailable, Boolean waterAvailable, Boolean wifiAvailable, Boolean petsAllowed)
+    public Apartment() // Parameterless constructor for EF Core
+    {
+    }
+
+    public Apartment(string apartmentName, string address, string street, string location,  bool isVacant, bool parkingAvailable, bool waterAvailable, bool wifiAvailable, bool petsAllowed)
     {
         ApartmentName = apartmentName;
         Address = address;
         Street = street;
         Location = location;
-        NumberOfUnits = numberOfUnits;
         IsVacant = isVacant;
         ParkingAvailable = parkingAvailable;
         WaterAvailable = waterAvailable;
